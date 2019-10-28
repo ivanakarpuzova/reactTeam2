@@ -3,7 +3,6 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import AccountCircle from '@material-ui/icons/AccountCircle';
 import { Grid, Button } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
@@ -34,11 +33,11 @@ export const Navigation = () => {
   const classes = useStyles();
 
   return (
-    <AppBar style={{ background: 'transparent', boxShadow: 'none'}}>
+    <AppBar style={{ background: 'transparent', boxShadow: 'none' }}>
       <Toolbar>
         <Grid item sm={6}>
           <Typography variant="h6" color="inherit">
-            #НЕБИДИЃУБРЕ
+            #НЕБидиЃубре
           </Typography>
         </Grid>
         <Grid item sm={6} container direction="row" justify="flex-end">
@@ -55,8 +54,7 @@ export const Navigation = () => {
             variant="subtitle2"
             color="inherit"
             className={classes.user}
-          >
-          </Typography>
+          ></Typography>
           <Button
             className={classes.logOutButton}
             variant="contained"
