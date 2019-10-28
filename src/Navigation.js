@@ -20,9 +20,6 @@ const useStyles = makeStyles(theme => ({
   logOutButton: {
     margin: theme.spacing(1)
   },
-  navbar: {
-    backgroundColor: '#cc8403'
-  },
   user: {
     display: 'flex',
     alignItems: 'center',
@@ -37,11 +34,11 @@ export const Navigation = () => {
   const classes = useStyles();
 
   return (
-    <AppBar position="static" className={classes.navbar}>
+    <AppBar style={{ background: 'transparent', boxShadow: 'none'}}>
       <Toolbar>
         <Grid item sm={6}>
           <Typography variant="h6" color="inherit">
-            Think about us!
+            #НЕБИДИЃУБРЕ
           </Typography>
         </Grid>
         <Grid item sm={6} container direction="row" justify="flex-end">
