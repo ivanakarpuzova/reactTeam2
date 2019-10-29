@@ -15,12 +15,9 @@ import PaymentForm from './PaymentForm';
 import Review from './Review';
 import Background from '../checkout/pozadina.jpg';
 
-
-
 const useStyles = makeStyles(theme => ({
   appBar: {
-    position: 'relative',
-   
+    position: 'relative'
   },
   layout: {
     width: 'auto',
@@ -31,7 +28,7 @@ const useStyles = makeStyles(theme => ({
       marginLeft: 'auto',
       marginRight: 'auto',
       backgroundImage: `url(${Background})`
-    },
+    }
   },
   paper: {
     marginTop: theme.spacing(3),
@@ -40,21 +37,20 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
       marginTop: theme.spacing(6),
       marginBottom: theme.spacing(6),
-      padding: theme.spacing(3),
-      
-    },
+      padding: theme.spacing(3)
+    }
   },
   stepper: {
-    padding: theme.spacing(3, 0, 5),
+    padding: theme.spacing(3, 0, 5)
   },
   buttons: {
     display: 'flex',
-    justifyContent: 'flex-end',
+    justifyContent: 'flex-end'
   },
   button: {
     marginTop: theme.spacing(3),
-    marginLeft: theme.spacing(1),
-  },
+    marginLeft: theme.spacing(1)
+  }
 }));
 
 const steps = ['Лични податоци', 'Локација', 'Преглед'];
@@ -113,8 +109,9 @@ export default function Checkout() {
                   Thank you for your order.
                 </Typography>
                 <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order confirmation, and will
-                  send you an update when your order has shipped.
+                  Your order number is #2001539. We have emailed your order
+                  confirmation, and will send you an update when your order has
+                  shipped.
                 </Typography>
               </React.Fragment>
             ) : (
@@ -139,7 +136,6 @@ export default function Checkout() {
             )}
           </React.Fragment>
         </Paper>
-        
       </main>
     </React.Fragment>
   );

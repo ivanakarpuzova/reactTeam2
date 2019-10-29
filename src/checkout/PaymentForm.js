@@ -21,8 +21,6 @@ export default function PaymentForm() {
         <Grid item xs={12} md={6}>
           <TextField required id="expDate" label="Expiry date" fullWidth />
         </Grid>
-        
-        
       </Grid>
     </React.Fragment>
   );
