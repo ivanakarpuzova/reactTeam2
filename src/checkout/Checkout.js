@@ -1,23 +1,27 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import Paper from '@material-ui/core/Paper';
 import Stepper from '@material-ui/core/Stepper';
 import Step from '@material-ui/core/Step';
 import StepLabel from '@material-ui/core/StepLabel';
 import Button from '@material-ui/core/Button';
-import Link from '@material-ui/core/Link';
 import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
-import Background from '../checkout/pozadina.jpg';
 
 const useStyles = makeStyles(theme => ({
-  appBar: {
-    position: 'relative'
+  checkoutPage: {
+    minHeight: '100vh',
+    width: 'auto',
+    justifyContent: 'center',
+    alignContent: 'center',
+    backgroundImage: 'url(./login-background.jpg)',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    display: 'flex'
   },
   layout: {
     width: 'auto',
@@ -26,19 +30,11 @@ const useStyles = makeStyles(theme => ({
     [theme.breakpoints.up(600 + theme.spacing(2) * 2)]: {
       width: 600,
       marginLeft: 'auto',
-      marginRight: 'auto',
-      backgroundImage: `url(${Background})`
-    }
-  },
-  paper: {
-    marginTop: theme.spacing(3),
-    marginBottom: theme.spacing(3),
-    padding: theme.spacing(2),
-    [theme.breakpoints.up(600 + theme.spacing(3) * 2)]: {
-      marginTop: theme.spacing(6),
-      marginBottom: theme.spacing(6),
-      padding: theme.spacing(3)
-    }
+      marginRight: 'auto'
+    },
+    paddingTop: '64px',
+    marginTop: 'auto',
+    marginBottom: 'auto'
   },
   stepper: {
     padding: theme.spacing(3, 0, 5)
@@ -46,6 +42,9 @@ const useStyles = makeStyles(theme => ({
   buttons: {
     display: 'flex',
     justifyContent: 'flex-end'
+  },
+  paper: {
+    padding: '25px'
   },
   button: {
     marginTop: theme.spacing(3),
@@ -81,16 +80,9 @@ export default function Checkout() {
   };
 
   return (
-    <React.Fragment>
+    <div className={classes.checkoutPage}>
       <CssBaseline />
-      <AppBar position="absolute" color="default" className={classes.appBar}>
-        <Toolbar>
-          <Typography variant="h6" color="inherit" noWrap>
-            #НеБидиЃубре
-          </Typography>
-        </Toolbar>
-      </AppBar>
-      <main className={classes.layout}>
+      <div className={classes.layout}>
         <Paper className={classes.paper}>
           <Typography component="h1" variant="h4" align="center">
             Пријави
@@ -102,9 +94,9 @@ export default function Checkout() {
               </Step>
             ))}
           </Stepper>
-          <React.Fragment>
+          <>
             {activeStep === steps.length ? (
-              <React.Fragment>
+              <>
                 <Typography variant="h5" gutterBottom>
                   Thank you for your order.
                 </Typography>
@@ -113,9 +105,9 @@ export default function Checkout() {
                   confirmation, and will send you an update when your order has
                   shipped.
                 </Typography>
-              </React.Fragment>
+              </>
             ) : (
-              <React.Fragment>
+              <>
                 {getStepContent(activeStep)}
                 <div className={classes.buttons}>
                   {activeStep !== 0 && (
@@ -132,11 +124,11 @@ export default function Checkout() {
                     {activeStep === steps.length - 1 ? 'Place order' : 'Следно'}
                   </Button>
                 </div>
-              </React.Fragment>
+              </>
             )}
-          </React.Fragment>
+          </>
         </Paper>
-      </main>
-    </React.Fragment>
+      </div>
+    </div>
   );
 }

@@ -1,9 +1,6 @@
 import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
 import Grid from '@material-ui/core/Grid';
 
 const products = [
@@ -49,6 +46,7 @@ export default function Review() {
           <Typography variant="h6" gutterBottom className={classes.title}>
             Успешно! Ви благодариме :)
           </Typography>
+          <img height="250px" width="300" src="/neBidiGubreLogo.jpg" />
         </Grid>
       </Grid>
     </React.Fragment>

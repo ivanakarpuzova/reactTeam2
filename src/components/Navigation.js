@@ -8,12 +8,11 @@ import { Grid, Button } from '@material-ui/core';
 const useStyles = makeStyles(theme => ({
   button: {
     margin: theme.spacing(1),
+    color: '#fff',
+    textShadow: '2px #fff',
     '&:hover': {
-      backgroundColor: 'transparent',
-      borderBottomColor: '#ff9b4f',
-      borderBottomWidth: '2px',
-      borderBottomStyle: 'solid',
-      color: '#000'
+      backgroundColor: '#00000052',
+      color: '#fff'
     }
   },
   logOutButton: {
@@ -33,10 +32,10 @@ export const Navigation = () => {
   const classes = useStyles();
 
   return (
-    <AppBar style={{ background: 'transparent', boxShadow: 'none' }}>
+    <AppBar style={{ background: '#0e10150d', boxShadow: 'none' }}>
       <Toolbar>
         <Grid item sm={6}>
-          <Typography variant="h6" color="inherit">
+          <Typography variant="h6" style={{ color: '#fff' }}>
             #НЕБидиЃубре
           </Typography>
         </Grid>
