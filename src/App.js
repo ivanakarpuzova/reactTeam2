@@ -7,6 +7,10 @@ import { HomePage } from './pages/HomePage';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import amber from '@material-ui/core/colors/amber';
+import  Checkout  from '../src/checkout/Checkout';
+import Review from './checkout/Review';
+import Dashboard from './dashboard/Dashboard';
+
 
 const theme = createMuiTheme({
   palette: {
@@ -26,6 +30,8 @@ export const App = () => {
           <MainLayout exact path="/" component={HomePage} />
           <MainLayout path="/home" render={() => <Redirect to="/" />} />
           <Route path="/login" component={LogInPage} />
+          <Route path="/input" component={Checkout} />
+          <Route path="/statistiki" component={Dashboard} />
           <Route path="*" render={() => <Redirect to="/" />} />
         </Switch>
       </BrowserRouter>
