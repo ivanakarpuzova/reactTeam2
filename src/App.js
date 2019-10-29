@@ -27,11 +27,10 @@ export const App = () => {
       <BrowserRouter>
         <Switch>
           <MainLayout exact path="/" component={HomePage} />
-          <MainLayout path="/home" render={() => <Redirect to="/" />} />
           <Route path="/login" component={LogInPage} />
           <MainLayout path="/input" component={Checkout} />
           <MainLayout path="/chart" component={CustomChart} />
-          <MainLayout path="/statistiki" component={Dashboard} />
+          <MainLayout path="/dashboard" component={Dashboard} />
           <Route path="*" render={() => <Redirect to="/" />} />
         </Switch>
       </BrowserRouter>

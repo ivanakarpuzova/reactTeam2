@@ -50,7 +50,7 @@ export default function CustomDropzone(props) {
   const thumbs = files.map(file => (
     <div style={thumb} key={file.name}>
       <div style={thumbInner}>
-        <img src={file.preview} style={img} />
+        <img alt="" src={file.preview} style={img} />
       </div>
     </div>
   ));
