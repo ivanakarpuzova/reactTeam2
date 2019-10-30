@@ -4,6 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
 import { Grid, Button } from '@material-ui/core';
+import { Link, animateScroll as scroll } from 'react-scroll';
 
 const useStyles = makeStyles(theme => ({
   button: {
@@ -31,36 +32,71 @@ const useStyles = makeStyles(theme => ({
 export const Navigation = () => {
   const classes = useStyles();
 
+  const scrollToTop = () => {
+    scroll.scrollToTop();
+  };
+
   return (
-    <AppBar style={{ background: '#0e10150d', boxShadow: 'none' }}>
+    <AppBar style={{ background: '#0e101561', boxShadow: 'none' }}>
       <Toolbar>
         <Grid item sm={6}>
-          <Typography variant="h6" style={{ color: '#fff' }}>
+          <Button onClick={scrollToTop} className={classes.button}>
             #НЕБидиЃубре
-          </Typography>
+          </Button>
         </Grid>
         <Grid item sm={6} container direction="row" justify="flex-end">
-          <Button href="/" className={classes.button}>
-            Home
-          </Button>
-          <Button href="/about" className={classes.button}>
-            About
-          </Button>
-          <Button href="/contact" className={classes.button}>
-            Contact
-          </Button>
-          <Typography
-            variant="subtitle2"
-            color="inherit"
-            className={classes.user}
-          ></Typography>
-          <Button
+          <ul className="nav-items">
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section1"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button href="" className={classes.button}>
+                  Section 1
+                </Button>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section2"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button href="" className={classes.button}>
+                  Section 2
+                </Button>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link
+                activeClass="active"
+                to="section3"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button href="" className={classes.button}>
+                  Section 3
+                </Button>
+              </Link>
+            </li>
+          </ul>
+
+          {/* <Button
             className={classes.logOutButton}
             variant="contained"
             color="secondary"
           >
             Log out
-          </Button>
+          </Button>  */}
         </Grid>
       </Toolbar>
     </AppBar>

@@ -12,6 +12,8 @@ import Dashboard from './dashboard/Dashboard';
 import CustomChart from './chart/CustomChart';
 import Chatting from './components/Chatting';
 import CustomMapBox from './components/CustomMapBox';
+import { Error404Page } from './pages/Error404Page';
+import Scroll from './Scroll/Scroll';
 
 const theme = createMuiTheme({
   palette: {
@@ -33,13 +35,10 @@ export const App = () => {
           <MainLayout path="/input" component={Checkout} />
           <MainLayout path="/chart" component={CustomChart} />
           <MainLayout path="/chat" component={Chatting} />
-          {/* <MainLayout
-            path="/map"
-            render={() => <Redirect to="/map?access_token=token" />}
-          /> */}
           <MainLayout path="/map" component={CustomMapBox} />
           <MainLayout path="/dashboard" component={Dashboard} />
-          <Route path="*" render={() => <Redirect to="/" />} />
+          <Route path="/hi" component={Scroll} />
+          <Route path="*" component={Error404Page} />
         </Switch>
       </BrowserRouter>
     </MuiThemeProvider>
