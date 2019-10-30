@@ -26,6 +26,12 @@ const useStyles = makeStyles(theme => ({
   },
   userIcon: {
     marginRight: '5px'
+  },
+  list: {
+    listStyleType: 'none'
+  },
+  li: {
+    display: 'inline'
   }
 }));
 
@@ -45,8 +51,8 @@ export const Navigation = () => {
           </Button>
         </Grid>
         <Grid item sm={6} container direction="row" justify="flex-end">
-          <ul className="nav-items">
-            <li className="nav-item">
+          <ul className={classes.list}>
+            <li className={classes.li}>
               <Link
                 activeClass="active"
                 to="section1"
@@ -60,7 +66,7 @@ export const Navigation = () => {
                 </Button>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className={classes.li}>
               <Link
                 activeClass="active"
                 to="section2"
@@ -74,7 +80,7 @@ export const Navigation = () => {
                 </Button>
               </Link>
             </li>
-            <li className="nav-item">
+            <li className={classes.li}>
               <Link
                 activeClass="active"
                 to="section3"
