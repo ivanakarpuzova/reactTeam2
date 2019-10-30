@@ -2,9 +2,15 @@ import React from 'react';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 import { Carousel } from 'react-responsive-carousel';
 
-export default function CustomSlider() {
+export default function CustomCarousel() {
   return (
-    <Carousel autoPlay showThumbs={false}>
+    <Carousel
+      autoPlay
+      centerSlidePercentage={true}
+      infiniteLoop={true}
+      interval={'2500'}
+      transition={'550'}
+    >
       <div style={{ height: '70vh' }}>
         <img style={{ height: '100%', objectFit: 'cover' }} src="/zena.jpeg" />
         <p className="legend">Legend 1</p>

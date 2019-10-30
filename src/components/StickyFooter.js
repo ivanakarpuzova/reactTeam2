@@ -7,6 +7,7 @@ import InstagramIcon from '@material-ui/icons/Instagram';
 import TwitterIcon from '@material-ui/icons/Twitter';
 import PinterestIcon from '@material-ui/icons/Pinterest';
 import Grid from '@material-ui/core/Grid';
+import Subscribe from './Subscribe/Subscribe';
 
 const useStyles = makeStyles(theme => ({
   footer: {
@@ -27,20 +28,23 @@ export default function StickyFooter() {
         style={{ background: '#0e101561', boxShadow: 'none', padding: '20px' }}
       >
         <Grid item xs={7}>
-          <Typography variant="body1">
-            <img src="/korpi.png" width="170px" height="150px" />
-          </Typography>
-          <Typography variant="body2" color="textSecondary" align="left">
-            {'Copyright © '}
-            <Link color="inherit" href="https://material-ui.com/">
-              Your Website
-            </Link>{' '}
-            {new Date().getFullYear()}
-            {'.'}
-          </Typography>
+          <div style={{ marginLeft: '20px' }}>
+            <Typography variant="body1">
+              <img src="/korpi.png" width="170px" height="150px" />
+            </Typography>
+            <Typography variant="body2" color="textSecondary" align="left">
+              {'Copyright © '}
+              <Link color="inherit" href="https://material-ui.com/">
+                Your Website
+              </Link>{' '}
+              {new Date().getFullYear()}
+              {'.'}
+            </Typography>
+          </div>
         </Grid>
         <Grid item xs={5}>
-          <div align="center">
+          <Subscribe />
+          <div style={{ marginTop: '20px' }}>
             <a href="https://www.facebook.com/">
               <FacebookIcon />
             </a>

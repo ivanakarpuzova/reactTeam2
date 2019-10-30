@@ -2,7 +2,6 @@ import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
-import Typography from '@material-ui/core/Typography';
 import { Grid, Button } from '@material-ui/core';
 import { Link, animateScroll as scroll } from 'react-scroll';
 
@@ -43,7 +42,9 @@ export const Navigation = () => {
   };
 
   return (
-    <AppBar style={{ background: '#0e101561', boxShadow: 'none' }}>
+    <AppBar
+      style={{ background: '#0e101561', boxShadow: 'none', maxHeight: '64px' }}
+    >
       <Toolbar>
         <Grid item sm={6}>
           <Button onClick={scrollToTop} className={classes.button}>

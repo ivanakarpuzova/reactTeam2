@@ -4,7 +4,6 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
 import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
 import Grid from '@material-ui/core/Grid';
 
 const useStyles = makeStyles({
@@ -20,6 +19,12 @@ const useStyles = makeStyles({
     width: '150px',
     marginLeft: 'auto',
     marginRight: 'auto'
+  },
+  CardAction: {
+    paddingTop: '20px',
+    '&:hover': {
+      background: '#eeeeee'
+    }
   }
 });
 
@@ -53,7 +58,7 @@ export default function ImageCard() {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           <Card className={classes.card}>
-            <CardActionArea>
+            <div className={classes.CardAction}>
               <CardMedia
                 className={classes.media}
                 image="/zena.jpeg"
@@ -77,7 +82,7 @@ export default function ImageCard() {
                   живееме исполнет живот.
                 </Typography>
               </CardContent>
-            </CardActionArea>
+            </div>
           </Card>
         </Grid>
         <Grid
@@ -88,7 +93,7 @@ export default function ImageCard() {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           <Card className={classes.card}>
-            <CardActionArea>
+            <div className={classes.CardAction}>
               <CardMedia
                 className={classes.media}
                 image="/zena2.jpeg"
@@ -111,7 +116,7 @@ export default function ImageCard() {
                   ѓубрето!
                 </Typography>
               </CardContent>
-            </CardActionArea>
+            </div>
           </Card>
         </Grid>
         <Grid
@@ -122,7 +127,7 @@ export default function ImageCard() {
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           <Card className={classes.card}>
-            <CardActionArea>
+            <div className={classes.CardAction}>
               <CardMedia
                 className={classes.media}
                 image="/maz.jpeg"
@@ -146,7 +151,7 @@ export default function ImageCard() {
                   </p>
                 </Typography>
               </CardContent>
-            </CardActionArea>
+            </div>
           </Card>
         </Grid>
       </Grid>
