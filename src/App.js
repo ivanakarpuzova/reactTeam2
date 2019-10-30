@@ -10,6 +10,8 @@ import amber from '@material-ui/core/colors/amber';
 import Checkout from '../src/checkout/Checkout';
 import Dashboard from './dashboard/Dashboard';
 import CustomChart from './chart/CustomChart';
+import Chatting from './components/Chatting';
+import CustomMapBox from './components/CustomMapBox';
 
 const theme = createMuiTheme({
   palette: {
@@ -30,6 +32,12 @@ export const App = () => {
           <Route path="/login" component={LogInPage} />
           <MainLayout path="/input" component={Checkout} />
           <MainLayout path="/chart" component={CustomChart} />
+          <MainLayout path="/chat" component={Chatting} />
+          {/* <MainLayout
+            path="/map"
+            render={() => <Redirect to="/map?access_token=token" />}
+          /> */}
+          <MainLayout path="/map" component={CustomMapBox} />
           <MainLayout path="/dashboard" component={Dashboard} />
           <Route path="*" render={() => <Redirect to="/" />} />
         </Switch>

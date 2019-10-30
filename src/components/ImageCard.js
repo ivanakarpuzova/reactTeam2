@@ -10,15 +10,15 @@ import Paper from '@material-ui/core/Paper';
 
 const useStyles = makeStyles({
   card: {
-    marginTop: '40px',
-    Width: '200px',
-    height: '400px'
+    marginTop: '40px'
+    // width: '200px',
+    // height: '400px'
   },
   media: {
-    marginTop: '30px',
-    borderRadius: '80%',
+    // marginTop: '30px',
+    borderRadius: '100%',
     height: '150px',
-    width: '40%',
+    width: '150px',
     marginLeft: 'auto',
     marginRight: 'auto'
   }
@@ -29,8 +29,8 @@ export default function ImageCard() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
-        <Grid item xs>
+      <Grid container spacing={1} justify={'space-around'}>
+        <Grid item xs={12} md={4} spacing={3}>
           <Paper className={classes.paper}>
             <Card className={classes.card}>
               <CardActionArea>
@@ -65,7 +65,7 @@ export default function ImageCard() {
             </Card>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={12} md={4} spacing={3}>
           <Paper className={classes.paper}>
             <Card className={classes.card}>
               <CardActionArea>
@@ -99,7 +99,7 @@ export default function ImageCard() {
             </Card>
           </Paper>
         </Grid>
-        <Grid item xs>
+        <Grid item xs={12} md={4} spacing={3}>
           <Paper className={classes.paper}>
             <Card className={classes.card}>
               <CardActionArea>
