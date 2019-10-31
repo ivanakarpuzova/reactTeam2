@@ -22,6 +22,7 @@ const useStyles = makeStyles({
   },
   CardAction: {
     paddingTop: '20px',
+    textAlign: 'center',
     '&:hover': {
       background: '#eeeeee'
     }
