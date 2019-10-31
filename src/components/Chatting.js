@@ -1,8 +1,9 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
+import Checkout from '../checkout/Checkout.js';
 
 export default function Chatting() {
-  const handleEnd = () => {
+  const handleEnd = values => {
     window.location.assign('/input');
   };
 
@@ -13,7 +14,13 @@ export default function Chatting() {
       steps={[
         {
           id: '1',
-          message: 'What is your name?',
+          message:
+            'Здраво. Ние сме еколошки активисти. Тука сме да те информираме околу еколошките акции кои се случуваат.',
+          trigger: 'ask'
+        },
+        {
+          id: 'ask',
+          message: 'Како се викаш?',
           trigger: 'name'
         },
         {
@@ -23,19 +30,19 @@ export default function Chatting() {
         },
         {
           id: '3',
-          message: 'Hi {previousValue}! What is your gender?',
+          message: '{previousValue} избери го твојот пол',
           trigger: 'gender'
         },
         {
           id: 'gender',
           options: [
-            { value: 'male', label: 'Male', trigger: '5' },
-            { value: 'female', label: 'Female', trigger: '5' }
+            { value: 'male', label: 'Машко', trigger: '5' },
+            { value: 'female', label: 'Женско', trigger: '5' }
           ]
         },
         {
           id: '5',
-          message: 'How old are you?',
+          message: 'Колку години имаш?',
           trigger: 'age'
         },
         {
@@ -44,9 +51,9 @@ export default function Chatting() {
           trigger: '7',
           validator: value => {
             if (isNaN(value)) {
-              return 'value must be a number';
+              return 'Треба да биде внесен број';
             } else if (value < 0) {
-              return 'value must be positive';
+              return 'Треба да е внесен позитивен број';
             } else if (value > 120) {
               return `${value}? Come on!`;
             }
@@ -56,30 +63,30 @@ export default function Chatting() {
         },
         {
           id: '7',
-          message: 'Great!',
+          message: 'Супер!',
           trigger: 'update'
         },
 
         {
           id: 'update',
-          message: 'Would you like to join us?',
+          message: 'Дали би сакал/а да ни се придружиш во еко-акциите?',
           trigger: 'update-question'
         },
         {
           id: 'update-question',
           options: [
-            { value: 'yes', label: 'Yes', trigger: 'yes-clicked' },
-            { value: 'no', label: 'No', trigger: 'end-message' }
+            { value: 'yes', label: 'Да', trigger: 'yes-clicked' },
+            { value: 'no', label: 'Не', trigger: 'end-message' }
           ]
         },
         {
           id: 'end-message',
-          message: 'Thanks! Your data was submitted successfully!',
+          message: 'Ти благодариме!',
           end: true
         },
         {
           id: 'yes-clicked',
-          message: 'Great!',
+          message: 'Супер!',
           end: true
         }
       ]}

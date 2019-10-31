@@ -6,15 +6,16 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import DonutChart from './DonutChart';
+import CustomChart from '../chart/CustomChart';
 
 const useStyles = makeStyles(theme => ({
   root: {
-    flexGrow: 1,
     marginTop: '64px',
     height: '100vh'
   },
   card: {
-    display: 'flex'
+    display: 'flex',
+    width: '85%'
   }
   // paper: {
   //   padding: theme.spacing(2),
@@ -41,7 +42,7 @@ export default function Dasboard_new() {
         background: "url('/dot-grid.png')"
       }}
     >
-      <Grid container spacing={3} style={{ display: 'flex' }}>
+      <Grid container spacing={1} style={{ display: 'flex' }}>
         <Grid item xs={12} md={7}>
           <Grid container spacing={3}>
             <Grid
@@ -69,7 +70,12 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="1236" />
-                <img src="/1card.png" width="auto" height="140px" />
+                <img
+                  src="/1card.png"
+                  width="auto"
+                  height="140px"
+                  style={{ marginLeft: 'auto' }}
+                />
               </Card>
             </Grid>
             <Grid
@@ -97,7 +103,12 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="1236" />
-                <img src="/2card.png" width="auto" height="140px" />
+                <img
+                  src="/2card.png"
+                  width="auto"
+                  height="140px"
+                  style={{ marginLeft: 'auto' }}
+                />
               </Card>
             </Grid>
             <Grid
@@ -118,13 +129,18 @@ export default function Dasboard_new() {
                       109
                     </Typography>
                     <Typography variant="subtitle1" color="textSecondary">
-                      Локации кои треба да се чистат
+                      Локации за чистење
                     </Typography>
                   </CardContent>
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="109" />
-                <img src="/2card.png" width="auto" height="140px" />
+                <img
+                  src="/3card.png"
+                  width="auto"
+                  height="140px"
+                  style={{ marginLeft: 'auto' }}
+                />
               </Card>
             </Grid>
             <Grid
@@ -151,8 +167,26 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="1236" />
-                <img src="/2card.png" width="auto" height="140px" />
+                <img
+                  src="/4card.png"
+                  width="auto"
+                  height="140px"
+                  style={{ marginLeft: 'auto' }}
+                  style={{ marginLeft: 'auto' }}
+                />
               </Card>
+            </Grid>
+            <Grid item sm={12} md={12}>
+              <div
+                style={{
+                  display: 'flex',
+                  width: '90%',
+                  justifyContent: 'center',
+                  justifyItems: 'center'
+                }}
+              >
+                <CustomChart />
+              </div>
             </Grid>
           </Grid>
         </Grid>
