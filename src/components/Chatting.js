@@ -1,10 +1,9 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
-import Checkout from '../checkout/Checkout.js';
 
 export default function Chatting() {
-  const handleEnd = (values) => {
-    window.location.assign('/input')
+  const handleEnd = () => {
+    window.location.assign('/input');
   };
 
   return (
@@ -81,7 +80,6 @@ export default function Chatting() {
         {
           id: 'yes-clicked',
           message: 'Great!',
-          // trigger: window.location.assign('/input'),
           end: true
         }
       ]}

@@ -14,24 +14,34 @@ const useStyles = makeStyles(theme => ({
     height: '100vh'
   },
   card: {
-    display: 'flex',
-    width: 290,
-    height: 150
-  },
-  paper: {
-    padding: theme.spacing(2),
-    textAlign: 'center',
-    color: theme.palette.text.secondary,
-    width: '500px'
+    display: 'flex'
   }
+  // paper: {
+  //   padding: theme.spacing(2),
+  //   textAlign: 'center',
+  //   color: theme.palette.text.secondary,
+  //   width: '500px'
+  // }
 }));
 
 export default function Dasboard_new() {
   const classes = useStyles();
 
   return (
-    <div className={classes.root}>
-      <Grid container spacing={3}>
+    <div
+      style={{
+        minHeight: '95vh',
+        width: 'auto',
+        display: 'flex',
+        padding: 0,
+        margin: 0,
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        background: "url('/dot-grid.png')"
+      }}
+    >
+      <Grid container spacing={3} style={{ display: 'flex' }}>
         <Grid item xs={12} md={7}>
           <Grid container spacing={3}>
             <Grid
@@ -42,7 +52,8 @@ export default function Dasboard_new() {
               style={{
                 display: 'flex',
                 justifyContent: 'center',
-                justifyItems: 'center'
+                justifyItems: 'center',
+                alignContent: 'center'
               }}
             >
               <Card className={classes.card}>
@@ -58,7 +69,7 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="1236" />
-                <img src="/ecoOff.jpg" width="200px" height="140px" />
+                <img src="/1card.png" width="auto" height="140px" />
               </Card>
             </Grid>
             <Grid
@@ -69,7 +80,8 @@ export default function Dasboard_new() {
               style={{
                 display: 'flex',
                 justifyContent: 'center',
-                justifyItems: 'center'
+                justifyItems: 'center',
+                alignContent: 'center'
               }}
             >
               <Card className={classes.card}>
@@ -85,7 +97,7 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="1236" />
-                <img src="/inprogress.jpg" width="200px" height="140px" />
+                <img src="/2card.png" width="auto" height="140px" />
               </Card>
             </Grid>
             <Grid
@@ -112,7 +124,7 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="109" />
-                <img src="/warning2.jpg" width="200px" height="140px" />
+                <img src="/2card.png" width="auto" height="140px" />
               </Card>
             </Grid>
             <Grid
@@ -139,7 +151,7 @@ export default function Dasboard_new() {
                   <div className={classes.controls}></div>
                 </div>
                 <CardMedia className={classes.cover} title="1236" />
-                <img src="/pp.png" width="200px" height="140px" />
+                <img src="/2card.png" width="auto" height="140px" />
               </Card>
             </Grid>
           </Grid>

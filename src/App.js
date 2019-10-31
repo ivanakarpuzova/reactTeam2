@@ -3,12 +3,14 @@ import { Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import { Route } from 'react-router-dom';
 import { LogInPage } from './pages/LogInPage';
 import { MainLayout } from './layout/MainLayout';
+import { SecondaryLayout } from './layout/SecondaryLayout';
+
 import { HomePage } from './pages/HomePage';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import amber from '@material-ui/core/colors/amber';
 import Checkout from '../src/checkout/Checkout';
-import Dashboard_new from './DashNew/Dashboard_new';
+import Dashboard from './dashboard/Dashboard';
 import CustomChart from './chart/CustomChart';
 import Chatting from './components/Chatting';
 import CustomMapBox from './components/CustomMapBox';
@@ -31,11 +33,11 @@ export const App = () => {
         <Switch>
           <MainLayout exact path="/" component={HomePage} />
           <Route path="/login" component={LogInPage} />
-          <MainLayout path="/input" component={Checkout} />
+          <SecondaryLayout path="/input" component={Checkout} />
           <MainLayout path="/chart" component={CustomChart} />
           <MainLayout path="/chat" component={Chatting} />
           <MainLayout path="/map" component={CustomMapBox} />
-          <MainLayout path="/dashboard" component={Dashboard_new} />
+          <MainLayout path="/dashboard" component={Dashboard} />
           <Route path="*" component={Error404Page} />
         </Switch>
       </BrowserRouter>

@@ -4,6 +4,7 @@ import ImageCard from '../components/ImageCard';
 import CustomCarousel from '../components/CustomCarousel';
 import Chatting from '../components/Chatting';
 import Dasboard_new from '../DashNew/Dashboard_new';
+import CustomizedSnackbars from '../components/CustomizedSnackbars';
 
 const homeStyle = {
   position: 'fixed',
@@ -18,12 +19,12 @@ export const HomePage = () => {
         <Chatting />
       </div>
       <div id="section1">
-        <BackgroundVideo videoURL="/video.mp4" />
+        <BackgroundVideo videoURL="/final1.mp4" />
       </div>
-      <div id="section2">
+      <div id="section2" style={{ display: 'flex', justifyContent: 'center' }}>
         <ImageCard />
       </div>
-      <div id="section3">
+      <div id="section3" style={{ display: 'flex', justifyContent: 'center' }}>
         <Dasboard_new />
       </div>
       <div id="section4" style={{ display: 'flex', justifyContent: 'center' }}>

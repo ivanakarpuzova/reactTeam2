@@ -67,7 +67,7 @@ export default function CustomDropzone(props) {
     <section className="container">
       <div {...getRootProps({ className: 'dropzone' })}>
         <input {...getInputProps()} />
-        <p>Drag 'n' drop some files here, or click to select files</p>
+        <p>Прикачи слика тука</p>
       </div>
       <aside style={thumbsContainer}>{thumbs}</aside>
     </section>

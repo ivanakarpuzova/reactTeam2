@@ -60,8 +60,8 @@ export default function StickyFooter() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              flexDirection: 'column',
-              marginTop: '20px'
+              flexDirection: 'column'
+              // marginTop: '20px'
             }}
           >
             <Subscribe />

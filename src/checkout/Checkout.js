@@ -10,6 +10,7 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
+import CustomizedSnackbars from '../components/CustomizedSnackbars';
 
 const useStyles = makeStyles(theme => ({
   checkoutPage: {
@@ -44,7 +45,8 @@ const useStyles = makeStyles(theme => ({
     justifyContent: 'flex-end'
   },
   paper: {
-    padding: '25px'
+    padding: '25px',
+    background: 'rgba(255, 255, 255, 0.9)'
   },
   button: {
     marginTop: theme.spacing(3),
@@ -52,7 +54,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-const steps = ['Лични податоци', 'Локација', 'Преглед'];
+const steps = ['Лични податоци', 'Локација', 'Kрај'];
 
 function getStepContent(step) {
   switch (step) {
@@ -72,10 +74,7 @@ export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
-    // if(activeStep+1===steps.length){
-    //   window.location.assign('/');
-    // }
-      setActiveStep(activeStep + 1);
+    setActiveStep(activeStep + 1);
   };
 
   const handleBack = () => {
@@ -84,51 +83,62 @@ export default function Checkout() {
 
   return (
     <>
-    {activeStep === steps.length ? (
-      window.location.assign('/')
-    ) : ( <>{
-    <div className={classes.checkoutPage}>
-      <CssBaseline />
-      <div className={classes.layout}>
-        <Paper className={classes.paper}>
-          <Typography component="h1" variant="h4" align="center">
-            Пријави
-          </Typography>
-          <Stepper activeStep={activeStep} className={classes.stepper}>
-            {steps.map(label => (
-              <Step key={label}>
-                <StepLabel>{label}</StepLabel>
-              </Step>
-            ))}
-          </Stepper>
-          <>
-            {activeStep === steps.length ? (
-              window.location.assign('/')
-            ) : (
-              <>
-                {getStepContent(activeStep)}
-                <div className={classes.buttons}>
-                  {activeStep !== 0 && (
-                    <Button onClick={handleBack} className={classes.button}>
-                      Назад
-                    </Button>
-                  )}
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    onClick={handleNext}
-                    className={classes.button}
-                  >
-                    {activeStep === steps.length - 1 ? 'Потврди' : 'Следно'}
-                  </Button>
-                </div>
-              </>
-            )}
-          </>
-        </Paper>
-      </div>
-    </div>} </>
-    )}
-  </>
+      {activeStep === steps.length ? (
+        window.location.assign('/')
+      ) : (
+        <>
+          {
+            <div className={classes.checkoutPage}>
+              <CssBaseline />
+              <div className={classes.layout}>
+                <Paper className={classes.paper}>
+                  <Typography component="h1" variant="h4" align="center">
+                    Пријави
+                  </Typography>
+                  <Stepper activeStep={activeStep} className={classes.stepper}>
+                    {steps.map(label => (
+                      <Step key={label}>
+                        <StepLabel>{label}</StepLabel>
+                      </Step>
+                    ))}
+                  </Stepper>
+                  <>
+                    {activeStep === steps.length ? (
+                      window.location.assign('/')
+                    ) : (
+                      <>
+                        {getStepContent(activeStep)}
+                        <div className={classes.buttons}>
+                          {activeStep !== 0 && (
+                            <Button
+                              onClick={handleBack}
+                              className={classes.button}
+                            >
+                              Назад
+                            </Button>
+                          )}
+
+                          <Button
+                            variant="contained"
+                            color="primary"
+                            onClick={handleNext}
+                            className={classes.button}
+                          >
+                            {activeStep === steps.length - 1
+                              ? 'Потврди'
+                              : 'Следно'}
+                          </Button>
+                          {/* <CustomizedSnackbars /> */}
+                        </div>
+                      </>
+                    )}
+                  </>
+                </Paper>
+              </div>
+            </div>
+          }
+        </>
+      )}
+    </>
   );
 }

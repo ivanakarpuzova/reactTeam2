@@ -32,7 +32,9 @@ const useStyles = makeStyles(theme => ({
     fontWeight: '700'
   },
   title: {
-    marginTop: theme.spacing(2)
+    display: 'flex',
+    flexDirection: 'column',
+    justifyContent: 'center'
   }
 }));
 
@@ -42,11 +44,22 @@ export default function Review() {
   return (
     <React.Fragment>
       <Grid container spacing={2}>
+        <Grid
+          item
+          xs={12}
+          sm={6}
+          style={{ display: 'flex', justifyContent: 'center' }}
+        >
+          <div className={classes.title}>
+            <Typography variant="h6">
+              Успешна пријава. <br /> Ви благодариме!
+            </Typography>
+          </div>
+        </Grid>
         <Grid item xs={12} sm={6}>
-          <Typography variant="h6" gutterBottom className={classes.title}>
-            Успешно! Ви благодариме :)
-          </Typography>
-          <img alt="" height="150px" width="200" src="/neBidiGubreLogo.jpg" />
+          <div className={classes.title}>
+            <img alt="" height="150px" width="200" src="/neBidiGubreLogo.jpg" />
+          </div>
         </Grid>
       </Grid>
     </React.Fragment>

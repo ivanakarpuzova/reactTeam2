@@ -35,7 +35,7 @@ export default function ImageCard() {
   return (
     <div
       style={{
-        height: '95vh',
+        minHeight: '95vh',
         width: 'auto',
         display: 'flex',
         padding: 0,
@@ -49,13 +49,13 @@ export default function ImageCard() {
         container
         direction="row"
         justify="space-around"
+        style={{ marginTop: 'auto', marginBottom: 'auto' }}
         alignItems="center"
       >
         <Grid
           item
           xs={12}
           md={4}
-          spacing={3}
           style={{ display: 'flex', justifyContent: 'center' }}
         >
           <Card className={classes.card}>
