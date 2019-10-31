@@ -6,7 +6,10 @@ const { Button } = require('@material-ui/core');
 const useStyles = makeStyles(theme => ({
   image: {
     maxHeight: '100vh',
-    maxWidth: '60vw'
+    // maxWidth: '60vw',
+    display: 'block',
+    margin: 'auto',
+    marginTop: '-40px'
   }
 }));
 
@@ -17,12 +20,23 @@ export const Error404Page = () => {
   setTimeout(() => setShow(true), 300);
   return (
     <>
-      <Image
+      <Button
+        variant="raised"
+        style={{
+          backgroundColor: 'black',
+          color: 'white',
+          marginLeft: '30px',
+          marginTop: '30px'
+        }}
+        href="/"
+      >
+        Home
+      </Button>
+      <img
         src={show ? `/error404Page.png` : ''}
         disableSpinner
         className={classes.image}
       />
-      <Button variant="raised">Go back</Button>
     </>
   );
 };

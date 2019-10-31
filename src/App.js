@@ -34,9 +34,9 @@ export const App = () => {
           <MainLayout exact path="/" component={HomePage} />
           <Route path="/login" component={LogInPage} />
           <SecondaryLayout path="/input" component={Checkout} />
-          <MainLayout path="/chart" component={CustomChart} />
-          <MainLayout path="/chat" component={Chatting} />
-          <MainLayout path="/map" component={CustomMapBox} />
+          {/* <MainLayout path="/chart" component={CustomChart} /> */}
+          {/* <MainLayout path="/chat" component={Chatting} /> */}
+          {/* <MainLayout path="/map" component={CustomMapBox} /> */}
           <MainLayout path="/dashboard" component={Dashboard} />
           <Route path="*" component={Error404Page} />
         </Switch>

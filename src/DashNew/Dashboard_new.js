@@ -7,6 +7,7 @@ import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import DonutChart from './DonutChart';
 import CustomChart from '../chart/CustomChart';
+import Orders from '../dashboard/Orders';
 
 const useStyles = makeStyles(theme => ({
   root: {
@@ -34,7 +35,7 @@ export default function Dasboard_new() {
         minHeight: '95vh',
         width: 'auto',
         display: 'flex',
-        padding: 0,
+        padding: '20px 0px 20px 0px',
         margin: 0,
         display: 'flex',
         alignItems: 'center',
@@ -181,8 +182,8 @@ export default function Dasboard_new() {
                 style={{
                   display: 'flex',
                   width: '90%',
-                  justifyContent: 'center',
-                  justifyItems: 'center'
+                  marginRight: 'auto',
+                  marginLeft: 'auto'
                 }}
               >
                 <CustomChart />
@@ -198,6 +199,7 @@ export default function Dasboard_new() {
         >
           <DonutChart />
         </Grid>
+        <Orders />
       </Grid>
     </div>
   );
