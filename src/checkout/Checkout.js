@@ -17,7 +17,7 @@ const useStyles = makeStyles(theme => ({
     width: 'auto',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundImage: 'url(./login-background.jpg)',
+    backgroundImage: 'url(/pozadina1.jpg)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center',
@@ -72,7 +72,10 @@ export default function Checkout() {
   const [activeStep, setActiveStep] = React.useState(0);
 
   const handleNext = () => {
-    setActiveStep(activeStep + 1);
+    // if(activeStep+1===steps.length){
+    //   window.location.assign('/');
+    // }
+      setActiveStep(activeStep + 1);
   };
 
   const handleBack = () => {
@@ -80,6 +83,10 @@ export default function Checkout() {
   };
 
   return (
+    <>
+    {activeStep === steps.length ? (
+      window.location.assign('/')
+    ) : ( <>{
     <div className={classes.checkoutPage}>
       <CssBaseline />
       <div className={classes.layout}>
@@ -96,16 +103,7 @@ export default function Checkout() {
           </Stepper>
           <>
             {activeStep === steps.length ? (
-              <>
-                <Typography variant="h5" gutterBottom>
-                  Thank you for your order.
-                </Typography>
-                <Typography variant="subtitle1">
-                  Your order number is #2001539. We have emailed your order
-                  confirmation, and will send you an update when your order has
-                  shipped.
-                </Typography>
-              </>
+              window.location.assign('/')
             ) : (
               <>
                 {getStepContent(activeStep)}
@@ -121,7 +119,7 @@ export default function Checkout() {
                     onClick={handleNext}
                     className={classes.button}
                   >
-                    {activeStep === steps.length - 1 ? 'Place order' : 'Следно'}
+                    {activeStep === steps.length - 1 ? 'Потврди' : 'Следно'}
                   </Button>
                 </div>
               </>
@@ -129,6 +127,8 @@ export default function Checkout() {
           </>
         </Paper>
       </div>
-    </div>
+    </div>} </>
+    )}
+  </>
   );
 }

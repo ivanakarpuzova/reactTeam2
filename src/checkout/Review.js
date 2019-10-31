@@ -46,7 +46,7 @@ export default function Review() {
           <Typography variant="h6" gutterBottom className={classes.title}>
             Успешно! Ви благодариме :)
           </Typography>
-          <img alt="" height="250px" width="300" src="/neBidiGubreLogo.jpg" />
+          <img alt="" height="150px" width="200" src="/neBidiGubreLogo.jpg" />
         </Grid>
       </Grid>
     </React.Fragment>

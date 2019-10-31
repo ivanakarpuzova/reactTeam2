@@ -4,6 +4,7 @@ import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
 import CustomDropzone from '../components/CustomDropzone';
 import { makeStyles } from '@material-ui/core/styles';
+import { Select } from '@material-ui/core';
 
 const useStyles = makeStyles(theme => ({
   payment: {
@@ -28,8 +29,11 @@ export default function PaymentForm() {
         <Grid item xs={12} md={6}>
           <Typography variant="h6" gutterBottom>
             Локација
+            
           </Typography>
-          <TextField required id="cardName" label="Општина" fullWidth />
+          <TextField required id="cardName" label="Општина" fullWidth>
+            
+          </TextField>
           <TextField required id="cardName" label="Град" fullWidth />
         </Grid>
         <Grid item xs={12} md={6}>

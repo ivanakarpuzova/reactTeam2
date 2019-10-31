@@ -49,30 +49,10 @@ export default function AddressForm() {
             autoComplete="billing address-line2"
           />
         </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="city"
-            name="city"
-            label="Град"
-            fullWidth
-            autoComplete="billing address-level2"
-          />
-        </Grid>
-        <Grid item xs={12} sm={6}>
-          <TextField id="state" name="state" label="Општина" fullWidth />
-        </Grid>
+        
+        
 
-        <Grid item xs={12} sm={6}>
-          <TextField
-            required
-            id="country"
-            name="country"
-            label="Држава"
-            fullWidth
-            autoComplete="billing country"
-          />
-        </Grid>
+        
       </Grid>
     </React.Fragment>
   );
