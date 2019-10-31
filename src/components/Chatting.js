@@ -1,9 +1,15 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
+import Checkout from '../checkout/Checkout.js';
 
 export default function Chatting() {
+  const handleEnd = (values) => {
+    window.location.assign('/input')
+  };
+
   return (
     <ChatBot
+      handleEnd={handleEnd}
       floating={true}
       steps={[
         {
@@ -63,14 +69,19 @@ export default function Chatting() {
         {
           id: 'update-question',
           options: [
-            { value: 'yes', label: 'Yes', trigger: 'end-message' },
+            { value: 'yes', label: 'Yes', trigger: 'yes-clicked' },
             { value: 'no', label: 'No', trigger: 'end-message' }
           ]
         },
-
         {
           id: 'end-message',
           message: 'Thanks! Your data was submitted successfully!',
+          end: true
+        },
+        {
+          id: 'yes-clicked',
+          message: 'Great!',
+          // trigger: window.location.assign('/input'),
           end: true
         }
       ]}

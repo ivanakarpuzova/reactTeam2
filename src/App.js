@@ -8,7 +8,7 @@ import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import amber from '@material-ui/core/colors/amber';
 import Checkout from '../src/checkout/Checkout';
-import Dashboard from './dashboard/Dashboard';
+import Dashboard_new from './DashNew/Dashboard_new';
 import CustomChart from './chart/CustomChart';
 import Chatting from './components/Chatting';
 import CustomMapBox from './components/CustomMapBox';
@@ -35,7 +35,7 @@ export const App = () => {
           <MainLayout path="/chart" component={CustomChart} />
           <MainLayout path="/chat" component={Chatting} />
           <MainLayout path="/map" component={CustomMapBox} />
-          <MainLayout path="/dashboard" component={Dashboard} />
+          <MainLayout path="/dashboard" component={Dashboard_new} />
           <Route path="*" component={Error404Page} />
         </Switch>
       </BrowserRouter>

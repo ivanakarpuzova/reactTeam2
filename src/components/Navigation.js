@@ -63,7 +63,7 @@ export const Navigation = () => {
                 duration={500}
               >
                 <Button href="" className={classes.button}>
-                  Section 1
+                  Home
                 </Button>
               </Link>
             </li>
@@ -77,7 +77,7 @@ export const Navigation = () => {
                 duration={500}
               >
                 <Button href="" className={classes.button}>
-                  Section 2
+                  About
                 </Button>
               </Link>
             </li>
@@ -91,7 +91,21 @@ export const Navigation = () => {
                 duration={500}
               >
                 <Button href="" className={classes.button}>
-                  Section 3
+                  Dashboard
+                </Button>
+              </Link>
+            </li>
+            <li className={classes.li}>
+              <Link
+                activeClass="active"
+                to="section4"
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+              >
+                <Button href="" className={classes.button}>
+                  Carousel
                 </Button>
               </Link>
             </li>
