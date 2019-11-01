@@ -73,7 +73,7 @@ export const Navigation = () => {
                           duration={500}
                         >
                           <Button href="" className={classes.button}>
-                            Home
+                            Дома
                           </Button>
                         </Link>
                       </li>
@@ -87,7 +87,7 @@ export const Navigation = () => {
                           duration={500}
                         >
                           <Button href="" className={classes.button}>
-                            About
+                            За нас
                           </Button>
                         </Link>
                       </li>
@@ -101,7 +101,7 @@ export const Navigation = () => {
                           duration={500}
                         >
                           <Button href="" className={classes.button}>
-                            Dashboard
+                            Статистики
                           </Button>
                         </Link>
                       </li>
@@ -115,7 +115,7 @@ export const Navigation = () => {
                           duration={500}
                         >
                           <Button href="" className={classes.button}>
-                            Carousel
+                            Галерија
                           </Button>
                         </Link>
                       </li>

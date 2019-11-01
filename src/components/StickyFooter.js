@@ -13,9 +13,10 @@ const useStyles = makeStyles({
   footer: {
     padding: '0',
     marginTop: '20px',
-    background: '#0e101561',
+    background: 'transparent',
     display: 'flex',
-    justifyContent: 'center'
+    justifyContent: 'center',
+    boxShadow: '-1px 0px 20px 20px #00000024'
   }
 });
 
@@ -48,7 +49,7 @@ export default function StickyFooter() {
             <Typography variant="body2" color="textSecondary" align="left">
               {'Copyright © '}
               <Link color="inherit" href="https://material-ui.com/">
-                Your Website
+                #НеБидиЃубре
               </Link>{' '}
               {new Date().getFullYear()}
               {'.'}
@@ -60,28 +61,30 @@ export default function StickyFooter() {
             style={{
               display: 'flex',
               alignItems: 'center',
-              flexDirection: 'column'
-              // marginTop: '20px'
+              flexDirection: 'column',
+              marginTop: '20px'
             }}
           >
-            <Subscribe />
-            <div
-              style={{
-                marginTop: '20px'
-              }}
-            >
-              <a href="https://www.facebook.com/">
-                <FacebookIcon />
-              </a>
-              <a href="https://www.instagram.com/">
-                <InstagramIcon />
-              </a>
-              <a href="https://twitter.com/">
-                <TwitterIcon />
-              </a>
-              <a href="https://www.pinterest.com/">
-                <PinterestIcon />
-              </a>
+            <div>
+              <div>
+                <img src="/followus.png" width="auto" height="60px" />
+              </div>
+              <br></br>
+              <div style={{ display: 'flex', margin: 'auto' }}>
+                <a href="https://www.facebook.com/">
+                  <FacebookIcon />
+                </a>
+                <a href="https://www.instagram.com/">
+                  <InstagramIcon />
+                </a>
+                <a href="https://twitter.com/">
+                  <TwitterIcon />
+                </a>
+                <a href="https://www.pinterest.com/">
+                  <PinterestIcon />
+                </a>
+              </div>
+              <Subscribe />
             </div>
           </div>
         </Grid>

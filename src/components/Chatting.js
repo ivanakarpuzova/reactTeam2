@@ -1,6 +1,5 @@
 import React from 'react';
 import ChatBot from 'react-simple-chatbot';
-import Checkout from '../checkout/Checkout.js';
 
 export default function Chatting() {
   const handleEnd = values => {
@@ -82,7 +81,7 @@ export default function Chatting() {
         {
           id: 'end-message',
           message: 'Ти благодариме!',
-          end: true
+          end: false
         },
         {
           id: 'yes-clicked',

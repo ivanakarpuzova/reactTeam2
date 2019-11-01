@@ -65,7 +65,7 @@ export const NavBar = () => {
                 duration={500}
               >
                 <Button href="" className={classes.button}>
-                  Home
+                  Дома
                 </Button>
               </Link>
             </li>

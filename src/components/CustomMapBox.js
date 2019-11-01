@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactMapGL, { Marker } from 'react-map-gl';
 import ReactMapboxGl, { Layer, Feature, ZoomControl } from 'react-mapbox-gl';
+import { Button } from '@material-ui/core';
 
 const Map = ReactMapboxGl({
   accessToken:
@@ -43,7 +44,15 @@ class CustomMapBox extends React.Component {
     console.log(this.state.userLocation);
     return (
       <div className="App">
-        <button onClick={this.setUserLocation}>Моја локација</button>
+        <Button
+          style={{
+            background: 'rgba(142, 135, 113, 0.28)',
+            marginBottom: '2px'
+          }}
+          onClick={this.setUserLocation}
+        >
+          Моја локација
+        </Button>
         <div className="map">
           <ReactMapGL
             {...this.state.viewport}

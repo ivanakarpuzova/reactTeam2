@@ -40,7 +40,7 @@ const useStyles = makeStyles(theme => ({
     width: 'auto',
     justifyContent: 'center',
     alignContent: 'center',
-    backgroundImage: 'url(./login-background.jpg)',
+    backgroundImage: 'url(./pozadinaC.png)',
     backgroundRepeat: 'no-repeat',
     backgroundSize: 'cover',
     backgroundPosition: 'center'
@@ -137,10 +137,7 @@ export const LogInPage = () => {
             {errorObject && errorObject.password && (
               <div>{errorObject.password}</div>
             )}
-            <FormControlLabel
-              control={<Checkbox value="remember" color="primary" />}
-              label="Remember me"
-            />
+
             <Button
               type="submit"
               color="secondary"
@@ -148,20 +145,13 @@ export const LogInPage = () => {
               variant="contained"
               bgcolor="#ff9b4f"
               className={classes.submit}
+              href="/"
             >
               Log In
             </Button>
             <Grid container>
-              <Grid item xs>
-                <Link href="#" color="inherit">
-                  Forgot password?
-                </Link>
-              </Grid>
-              <Grid item>
-                <Link href="/register" color="inherit">
-                  {"Don't have an account? Sign Up"}
-                </Link>
-              </Grid>
+              <Grid item xs></Grid>
+              <Grid item></Grid>
             </Grid>
           </form>
         </div>

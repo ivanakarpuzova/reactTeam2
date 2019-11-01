@@ -7,7 +7,7 @@ export default class DonutChart extends Component {
 
     this.state = {
       options: {
-        colors: ['#2f5800', '#454545', '#74b600'],
+        colors: ['#00853f', '#9a9a9a', '#324945'],
         chart: {
           //  width : 700
         },

@@ -177,18 +177,6 @@ export default function Dasboard_new() {
                 />
               </Card>
             </Grid>
-            <Grid item sm={12} md={12}>
-              <div
-                style={{
-                  display: 'flex',
-                  width: '90%',
-                  marginRight: 'auto',
-                  marginLeft: 'auto'
-                }}
-              >
-                <CustomChart />
-              </div>
-            </Grid>
           </Grid>
         </Grid>
         <Grid
@@ -199,7 +187,30 @@ export default function Dasboard_new() {
         >
           <DonutChart />
         </Grid>
-        <Orders />
+        <Grid
+          container
+          spacing={1}
+          style={{
+            display: 'flex',
+            width: '90%',
+            marginLeft: 'auto',
+            marginRight: 'auto',
+            marginTop: '50px',
+            marginBottom: '50px'
+          }}
+        >
+          <Grid
+            item
+            xs={12}
+            md={6}
+            style={{ display: 'flex', justifyContent: 'center' }}
+          >
+            <CustomChart />
+          </Grid>
+          <Grid item xs={12} md={6}>
+            <Orders />
+          </Grid>
+        </Grid>
       </Grid>
     </div>
   );

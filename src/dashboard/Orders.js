@@ -14,12 +14,12 @@ function createData(id, date, name, shipTo, paymentMethod) {
 }
 
 const rows = [
-  createData(0, 'Скопје-Водно', '15', '500 m2', '03-07-2019'),
-  createData(1, 'Велес-Езеро Младост', '23', '1100 m2', '27-07-2019'),
-  createData(2, 'Скопје-Матка', '17', '750 m2', '28-07-2019'),
-  createData(3, 'Прилеп-Могила', '21', '1300 m2', '04-08-2019'),
-  createData(4, 'Крушево-Мечкин Камен', '13', '900 m2', '11-08-2019'),
-  createData(5, 'Куманово-Кокино', '18', '880 m2', '15-09-2019')
+  createData(0, 'Скопје-Водно', '15', '500 m2', '03-07 2019'),
+  createData(1, 'Велес-Езеро Младост', '23', '1100 m2', '27-07 2019'),
+  createData(2, 'Скопје-Матка', '17', '750 m2', '28-07 2019'),
+  createData(3, 'Прилеп-Могила', '21', '1300 m2', '04-08 2019'),
+  createData(4, 'Крушево-Мечкин Камен', '13', '900 m2', '11-08 2019'),
+  createData(5, 'Куманово-Кокино', '18', '880 m2', '15-09 2019')
 ];
 
 const useStyles = makeStyles(theme => ({
@@ -32,7 +32,6 @@ export default function Orders() {
   const classes = useStyles();
   return (
     <>
-      <Title>Recent Orders</Title>
       <Table size="small">
         <TableHead>
           <TableRow>
@@ -54,11 +53,6 @@ export default function Orders() {
           ))}
         </TableBody>
       </Table>
-      <div className={classes.seeMore}>
-        <Link color="primary" href="">
-          See more orders
-        </Link>
-      </div>
     </>
   );
 }

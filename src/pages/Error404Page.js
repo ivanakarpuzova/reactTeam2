@@ -23,14 +23,14 @@ export const Error404Page = () => {
       <Button
         variant="raised"
         style={{
-          backgroundColor: 'black',
-          color: 'white',
+          backgroundColor: '#ffc107',
+          color: 'black',
           marginLeft: '30px',
           marginTop: '30px'
         }}
         href="/"
       >
-        Home
+        Дома
       </Button>
       <img
         src={show ? `/error404Page.png` : ''}
