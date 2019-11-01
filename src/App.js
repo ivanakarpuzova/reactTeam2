@@ -1,15 +1,15 @@
 import React from 'react';
 import { Switch, BrowserRouter, Redirect } from 'react-router-dom';
 import { Route } from 'react-router-dom';
-import { LogInPage } from './pages/LogInPage';
+import { LogInPage } from './containers/LogInPage';
 import { MainLayout } from './layout/MainLayout';
 import { SecondaryLayout } from './layout/SecondaryLayout';
-import { HomePage } from './pages/HomePage';
+import { HomePage } from './containers/HomePage';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import amber from '@material-ui/core/colors/amber';
 import Checkout from './components/checkout/Checkout';
-import { Error404Page } from './pages/Error404Page';
+import { Error404Page } from './containers/Error404Page';
 
 const theme = createMuiTheme({
   palette: {

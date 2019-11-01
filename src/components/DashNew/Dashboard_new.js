@@ -18,12 +18,6 @@ const useStyles = makeStyles(theme => ({
     display: 'flex',
     width: '85%'
   }
-  // paper: {
-  //   padding: theme.spacing(2),
-  //   textAlign: 'center',
-  //   color: theme.palette.text.secondary,
-  //   width: '500px'
-  // }
 }));
 
 export default function Dasboard_new() {

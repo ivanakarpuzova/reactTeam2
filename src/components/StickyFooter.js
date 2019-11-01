@@ -56,37 +56,50 @@ export default function StickyFooter() {
             </Typography>
           </div>
         </Grid>
-        <Grid item xs={12} md={6}>
-          <div
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              flexDirection: 'column',
-              marginTop: '20px'
-            }}
-          >
-            <div>
-              <div>
-                <img src="/followus.png" width="auto" height="60px" />
-              </div>
-              <br></br>
-              <div style={{ display: 'flex', margin: 'auto' }}>
-                <a href="https://www.facebook.com/">
-                  <FacebookIcon />
-                </a>
-                <a href="https://www.instagram.com/">
-                  <InstagramIcon />
-                </a>
-                <a href="https://twitter.com/">
-                  <TwitterIcon />
-                </a>
-                <a href="https://www.pinterest.com/">
-                  <PinterestIcon />
-                </a>
-              </div>
-              <Subscribe />
-            </div>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          style={{
+            display: 'flex',
+            alignItems: 'end',
+            flexDirection: 'column',
+            justifyContent: 'center'
+          }}
+        >
+          <div>
+            <Typography variant="body1">
+              <img src="/followus.png" width="auto" height="60px" />
+            </Typography>
           </div>
+        </Grid>
+        <Grid
+          item
+          xs={12}
+          md={3}
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            flexDirection: 'column',
+            justifyContent: 'center'
+            // marginTop: '20px'
+          }}
+        >
+          <div style={{ marginBottom: '10px' }}>
+            <a href="https://www.facebook.com/">
+              <FacebookIcon />
+            </a>
+            <a href="https://www.instagram.com/">
+              <InstagramIcon />
+            </a>
+            <a href="https://twitter.com/">
+              <TwitterIcon />
+            </a>
+            <a href="https://www.pinterest.com/">
+              <PinterestIcon />
+            </a>
+          </div>
+          <Subscribe />
         </Grid>
       </Grid>
     </footer>

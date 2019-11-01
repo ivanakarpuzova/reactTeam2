@@ -1,7 +1,7 @@
 import React from 'react';
 import { BackgroundVideo } from '../components/BackgroundVideo';
 import ImageCard from '../components/ImageCard';
-import CustomCarousel from '../components/CustomCarousel';
+import CustomCarousel from '../components/CustomComponents/CustomCarousel';
 import Chatting from '../components/Chatting';
 import Dasboard_new from '../components/DashNew/Dashboard_new';
 

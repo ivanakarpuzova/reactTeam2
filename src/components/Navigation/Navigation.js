@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Grid, Button } from '@material-ui/core';
+import { Link as RouterLink } from 'react-router-dom';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import TemporaryDrawer from '../TemporaryDrawer';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
@@ -38,7 +39,7 @@ const useStyles = makeStyles(theme => ({
 
 export const Navigation = () => {
   const classes = useStyles();
-  const matches = useMediaQuery('(min-width:680px)');
+  const matches = useMediaQuery('(min-width:850px)');
 
   const scrollToTop = () => {
     scroll.scrollToTop();
@@ -118,6 +119,24 @@ export const Navigation = () => {
                             Галерија
                           </Button>
                         </Link>
+                      </li>
+                      <li className={classes.li}>
+                        <RouterLink
+                          activeClass="active"
+                          to="/prijavi"
+                          spy={true}
+                          smooth={true}
+                          offset={-70}
+                          duration={500}
+                        >
+                          <Button
+                            href="/prijavi"
+                            className={classes.button}
+                            style={{ background: '#ffc107', color: 'black' }}
+                          >
+                            Пријави
+                          </Button>
+                        </RouterLink>
                       </li>
                     </>
                   }{' '}
