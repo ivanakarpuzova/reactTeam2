@@ -3,7 +3,7 @@ import ChatBot from 'react-simple-chatbot';
 
 export default function Chatting() {
   const handleEnd = values => {
-    window.location.assign('/input');
+    window.location.assign('/prijavi');
   };
 
   return (

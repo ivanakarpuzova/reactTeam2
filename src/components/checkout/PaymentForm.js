@@ -2,9 +2,9 @@ import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import Grid from '@material-ui/core/Grid';
 import TextField from '@material-ui/core/TextField';
-import CustomDropzone from '../components/CustomDropzone';
+import CustomDropzone from '../CustomDropzone';
 import { makeStyles } from '@material-ui/core/styles';
-import CustomMapBox from '../components/CustomMapBox';
+import CustomMapBox from '../CustomMapBox';
 
 const useStyles = makeStyles(theme => ({
   payment: {

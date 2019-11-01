@@ -3,8 +3,7 @@ import { BackgroundVideo } from '../components/BackgroundVideo';
 import ImageCard from '../components/ImageCard';
 import CustomCarousel from '../components/CustomCarousel';
 import Chatting from '../components/Chatting';
-import Dasboard_new from '../DashNew/Dashboard_new';
-import CustomizedSnackbars from '../components/CustomizedSnackbars';
+import Dasboard_new from '../components/DashNew/Dashboard_new';
 
 const homeStyle = {
   position: 'fixed',

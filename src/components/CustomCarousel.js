@@ -5,7 +5,7 @@ import { Carousel } from 'react-responsive-carousel';
 export default function CustomCarousel() {
   return (
     <Carousel
-      // autoPlay
+      autoPlay
       centerSlidePercentage={true}
       infiniteLoop={true}
       interval={'2500'}

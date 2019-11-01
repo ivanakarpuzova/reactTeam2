@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Route } from 'react-router-dom';
-import { Navigation } from '../components/Navigation';
+import { Navigation } from '../components/Navigation/Navigation';
 import StickyFooter from '../components/StickyFooter';
 
 export const MainLayout = ({ component: Component, ...rest }) => {

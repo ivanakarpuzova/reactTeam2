@@ -4,7 +4,7 @@ import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import { Grid, Button } from '@material-ui/core';
 import { Link, animateScroll as scroll } from 'react-scroll';
-import TemporaryDrawer from './TemporaryDrawer';
+import TemporaryDrawer from '../TemporaryDrawer';
 import useMediaQuery from '@material-ui/core/useMediaQuery';
 
 const useStyles = makeStyles(theme => ({

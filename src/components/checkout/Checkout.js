@@ -10,7 +10,6 @@ import Typography from '@material-ui/core/Typography';
 import AddressForm from './AddressForm';
 import PaymentForm from './PaymentForm';
 import Review from './Review';
-import CustomizedSnackbars from '../components/CustomizedSnackbars';
 
 const useStyles = makeStyles(theme => ({
   checkoutPage: {
@@ -128,7 +127,6 @@ export default function Checkout() {
                               ? 'Потврди'
                               : 'Следно'}
                           </Button>
-                          {/* <CustomizedSnackbars /> */}
                         </div>
                       </>
                     )}

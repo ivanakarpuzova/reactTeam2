@@ -8,7 +8,7 @@ import { HomePage } from './pages/HomePage';
 import { createMuiTheme, MuiThemeProvider } from '@material-ui/core/styles';
 import orange from '@material-ui/core/colors/orange';
 import amber from '@material-ui/core/colors/amber';
-import Checkout from '../src/checkout/Checkout';
+import Checkout from './components/checkout/Checkout';
 import { Error404Page } from './pages/Error404Page';
 
 const theme = createMuiTheme({
